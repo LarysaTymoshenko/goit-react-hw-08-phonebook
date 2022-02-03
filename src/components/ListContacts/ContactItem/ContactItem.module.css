@@ -1,0 +1,34 @@
+.itemText {
+  margin-right: 20px;
+}
+
+.button {
+  padding: 4px 10px;
+  border: 1px solid rgb(141, 133, 63);
+  border-radius: 10px;
+  background-color: wheat;
+  margin: 10px;
+}
+
+.button:hover,
+.button:focus {
+  color: rgb(255, 0, 106);
+  border-color: rgb(255, 0, 106);
+  background-color: wheat;
+  cursor: pointer;
+}
+.buttonEdit:hover {
+  color: rgb(28, 151, 24);
+  border-color: rgb(28, 151, 24);
+  background-color: wheat;
+  cursor: pointer;
+}
+.item {
+  border-bottom: 3px double rgb(141, 133, 63);
+  list-style: decimal;
+  width: 440px;
+}
+.input {
+  margin-right: 10px;
+  border: 3px double rgb(141, 133, 63);
+}
