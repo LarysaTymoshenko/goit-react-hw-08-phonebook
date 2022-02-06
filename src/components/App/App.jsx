@@ -1,5 +1,6 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
+import Loader from '../Loader/Loader';
 import UserMenu from '../UserMenu/UserMenu';
 import LoginPage from '../../pages/login';
 import RegisterPage from '../../pages/register';
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Suspense fallback={<p>Loading....</p>}>
+      <Suspense fallback={<p>Loading.... <Loader/></p>} >
         <Routes>
           <Route path="/" element={<UserMenu />}>
             <Route

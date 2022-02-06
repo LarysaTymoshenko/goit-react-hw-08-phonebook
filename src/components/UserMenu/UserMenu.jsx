@@ -25,27 +25,28 @@ export default function UserMenu() {
       <Section size="full">
         <Block>
           {userName && !location.pathname.includes('add') && (
-            <Link to={`${location.pathname}/add`}>Add contact</Link>
+            <Link  style={{  color: 'rgb(117, 111, 58)' }} to={`${location.pathname}/add` }>Add contact</Link>
           )}
           <List>
             {!userName ? (
               <>
                 <Item>
-                  <Link to="register">Register</Link>
+                  <Link to="register" style={{ color: 'inherit', textDecoration: 'none' }}>Register</Link>
                 </Item>
                 <Item>
-                  <Link to="login">LogIn</Link>
+                  <Link to="login" style={{  color: 'inherit',textDecoration: 'none' }}>LogIn</Link>
                 </Item>
               </>
             ) : (
               <>
                 <Item>Hello, {userName}</Item>
                 <Item>
-                  <Link
-                    to="/"
+                    <Link
+                      to="/"
+                      style={{  color: 'rgb(117, 111, 58)' }}
                     onClick={() => {
                       logoutUserHook()
-                    }}
+                      }}
                   >
                     LogOut
                   </Link>
