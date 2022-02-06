@@ -38,7 +38,7 @@ function ContactItem({ id, nameContact, numberContact }) {
     setIsEdit(false)
   };
   return (
-   <li className={s.item} >
+   <li className={s.item}  key={id} >
    {isEdit ? (
         <input
           type="text"
@@ -94,9 +94,7 @@ function ContactItem({ id, nameContact, numberContact }) {
           type="button"
           className={s.button}
           data-id={id}
-          onClick={() => {
-          onChange(false)
-          }}
+          onClick={() =>onChange(false)}
           disabled={isLoading}
         >
           <HighlightOffRoundedIcon fontSize="small" />

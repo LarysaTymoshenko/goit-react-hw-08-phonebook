@@ -10,16 +10,18 @@ export default function Form() {
   const [number, setNumber] = useState("");
   const {  data: contacts } = useGetContactsQuery();
   const [addContact, { error }] = useAddContactMutation();
-  const isAlreadyContacts =()=> contacts.find((el) => el.name.toLowerCase() === name.toLowerCase())
-    .length !== 0;
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-   const contact = { name, phone: number }
-    if (isAlreadyContacts) {
-      onWarning(`Contacts ${name} already exist`)
+    const newContact = { name, phone: number };
+    // const isAlreadyContacts =()=> contacts.find((el) => el.name.toLowerCase() === name.toLowerCase())
+  //   .length !== 0;
+
+    if (contacts.filter((el) => el.name.toLowerCase() === name.toLowerCase())
+        .length !== 0) {
+      onWarning(`Contact ${name} already exist`)
     } else {
-      addContact(contact)
+      addContact( newContact)
     }
     setName("");
     setNumber("");
@@ -30,7 +32,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit} className={s.form}>
-      <label className={s.label}>
+      <label  className={s.label}>
         Name
         <input
           id={"id"}
@@ -44,7 +46,7 @@ export default function Form() {
         />
         {""}
       </label>
-      <label  className={s.label}>
+      <label   className={s.label}>
         Number
         <input
           id={"number"}

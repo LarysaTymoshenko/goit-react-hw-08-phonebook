@@ -25,8 +25,8 @@ const ListContacts = () => {
           .filter((el) => el?.name.toUpperCase().includes(filter.toUpperCase()))
           .map((el) => (
             <ContactItem
-          id={el.id}
           key={el.id}
+           id={el.id}
           className={s.item}
           nameContact={el.name}
           numberContact={el.phone}
