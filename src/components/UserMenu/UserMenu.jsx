@@ -6,7 +6,7 @@ import { useLogoutUserMutation } from '../../redux/users/users-reducer'
 import Section from '../Section/Section'
 import { onError } from '../../utilits/toast'
 import { List } from './list.styled'
-import { Item } from './item.styles'
+import { Item } from './item.styled'
 import { Block } from './block.styled'
 
 export default function UserMenu() {

@@ -4,7 +4,11 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: none;
-  background-color: rgb(84, 82, 82);
+  background-color: rgb(246, 243, 243);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-image: url('../../images/titel.jpg');
 }
 
 .title {
@@ -14,4 +18,5 @@
   margin: 0;
   margin-bottom: 30px;
   padding-top: 30px;
+  font-style: oblique;
 }

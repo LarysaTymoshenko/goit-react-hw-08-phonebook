@@ -6,8 +6,9 @@ export const Input = styled.input`
   width: 100%;
   border-style: none;
   border-bottom-style: groove;
-  border-bottom: 3px solid wheat;
+  border-bottom: 3px solid black;
   background: transparent;
   outline: none;
-  color: white;
+  color: dark brown;
+  font-size:25px;
 `

@@ -1,7 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
-import logger from 'redux-logger';
-
 import {
   persistStore,
   persistReducer,
@@ -27,7 +25,6 @@ const middleware = getDefaultMiddleware => [
   }),
   contactsReducer.middleware,
   usersReducer.middleware,
-  // process.env.NODE_ENV !== 'production' && logger,
 ];
 
 const persistConfig = {

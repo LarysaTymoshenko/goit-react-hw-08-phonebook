@@ -2,16 +2,16 @@ import styled from '@emotion/styled'
 
 export const Button = styled.button`
   padding: 10px;
-  border: 1px solid wheat;
+  border: 1px solid black;
   border-radius: 10px;
   background-color: transparent;
-  color: wheat;
+  color: b;
   &:not(:last-child) {
     margin-right: 30px;
   }
   &:hover,
   &:focus {
-    color: rgb(6, 255, 247);
-    border-color: rgb(6, 255, 247);
+  background-color: wheat;
+  border-color: rgb(6, 255, 247);
   }
 `

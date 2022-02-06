@@ -28,7 +28,7 @@ export default function App() {
               path="login"
               element={
                 <PublicRoute
-                  element={<LoginPage />}
+                  element={<LoginPage/>}
                   redirectTo="/contacts"
                   restricted
                 />
