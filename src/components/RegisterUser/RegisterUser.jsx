@@ -20,7 +20,8 @@ export default function RegisterUser() {
     handleSubmit,
     setValue,
     formState: { errors },
-  } = useForm()
+  } = useForm();
+
   const navigate = useNavigate()
   const [
     registerUserHook,
@@ -78,7 +79,7 @@ export default function RegisterUser() {
       sessionStorage.removeItem('email')
       navigate('/contacts')
     }
-  }, [isSuccess])
+  }, [isSuccess]);
 
   return (
     <>

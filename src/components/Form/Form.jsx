@@ -14,11 +14,10 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newContact = { name, phone: number };
-    // const isAlreadyContacts =()=> contacts.find((el) => el.name.toLowerCase() === name.toLowerCase())
-  //   .length !== 0;
+    const isAlreadyContacts =contacts.find((el) => el.name.toLowerCase() === name.toLowerCase())
+    .length !== 0;
 
-    if (contacts.filter((el) => el.name.toLowerCase() === name.toLowerCase())
-        .length !== 0) {
+    if (isAlreadyContacts) {
       onWarning(`Contact ${name} already exist`)
     } else {
       addContact( newContact)
